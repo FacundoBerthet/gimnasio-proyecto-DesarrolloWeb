@@ -131,6 +131,7 @@ main{
 
 /*CARDS BOOTSTRAP*/
 .card{
+    border-radius: 14px;
     padding: 0rem; /* Quita el padding */
     margin: 0.5rem; /* Agrega un pequeño margen */
 }
