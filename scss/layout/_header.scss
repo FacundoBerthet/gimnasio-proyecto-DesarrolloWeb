@@ -1,6 +1,9 @@
+@import '../var/variables.scss';
+
 .menu{
     width: 100%;
     background-color: orange;
+    border-bottom: 0.2rem solid yellow;
 }
 
 .listanav{
@@ -11,43 +14,42 @@
     background-color: inherit;
 }
 
-
-header{
+header {
     grid-area: header;
-    background-color: orange;
     display: flex;
     justify-content: center;
     align-items: center;
     position: sticky;
     top: 0px;
-    border-bottom: 0.2rem solid yellow;
-    z-index: 1000
-}
+    z-index: 1000;
 
-header nav ul{
-    display: flex;
-    margin-right: 1rem;
-}
+    nav {
+        ul {
+            display: flex;
+            margin-right: 1rem;
+            
+            li {
+                list-style-type: none;
+                
+                a {
+                    color: #fd3a33; 
+                    text-decoration: none;
+                    font-family: "finish";
+                    background-color: yellow;
+                    padding: 0.8rem;
+                    border: solid red 1px;
+                    border-radius: 12px;
+                    
+                    &:hover {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
 
-header nav ul li{
-    list-style-type: none;
-}
-
-header nav ul li a{
-    color: #fd3a33; 
-    text-decoration: none;
-    font-family: "finish";
-    background-color: yellow;
-    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
-    border: solid red 1px;
-    border-radius: 12px;
-}
-
-header nav ul li a:hover{
-    background-color: white;
-}
-
-header a img{
-    width: 5.5rem;
-    margin: 1rem 0rem 1rem 1rem;
+    a img {
+        width: 5.5rem;
+        margin: 1rem 0 1rem 1rem;
+    }
 }

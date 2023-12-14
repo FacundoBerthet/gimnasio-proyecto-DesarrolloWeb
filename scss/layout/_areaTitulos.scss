@@ -1,20 +1,20 @@
+@import '../var/variables.scss';
+
 h1{
+    font: $fuenteTitulo;
+    color: $colorTitulo;
+    text-align: center;
     background-color: lightgray;
     margin: 1rem 1rem 2rem 1rem;
     grid-area: main;
-    text-align: center; 
-    font-size: 6rem; 
-    font-weight: 900;
-    font-family: "bebas";
     padding: 4rem 7rem 4rem 7rem;
 }
 
 h2{
+    font: $fuenteSubtitulo;
+    color: $colorSubtitulo;
     grid-area: main;
     text-align: center; 
-    font-size: 3rem; 
-    font-weight: 600;
-    font-family: "oswald";
     margin-bottom: 2rem;
     padding: 5rem;
 }

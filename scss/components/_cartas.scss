@@ -1,9 +1,17 @@
+@import '../var/variables.scss';
+
 .carta{
     background-color: lightslategray;
     margin: 1rem;
     border-radius: 14px;
     padding: 1rem;
     width: 50%;
+    .texto_carta{
+        font: $textoCarta;
+        text-align: center;
+        margin: 0.5rem;
+    }
+    
 }
 
 /*CARTA VIDEO INDEX*/
@@ -14,14 +22,15 @@
     margin: 1rem 1rem 3rem 1rem;
     border-radius: 14px;
         .texto_carta_video{
-            font-family: "oswald";
-            font-size: 2.5rem;
+            font: $textoCarta;
             text-align: center;
             margin: 0.5rem;
         }
+        ul{
+            list-style-type: none;
+        }
         ul li p{
-            font-family: "oswald";
-            font-size: 2rem;
+            font: $textoCarta;
             text-align: center;
             margin: 0.5rem;
         }
@@ -31,7 +40,7 @@
 .card{
     border-radius: 14px;
     padding: 0rem; 
-    margin: 0.5rem; 
+    margin: 0.5rem;
 }
 
 .bronce{
@@ -48,25 +57,11 @@
 
 .diamante{
     background-color: aquamarine;
-}
-
-
-.texto_carta ul li{
-    list-style-type: none;
-}
-
-.texto_carta{
-    font-family: "oswald";
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5rem;
-}
+}         
 
 
 
-.texto_carta_video ul li p{
-    font-family: "oswald";
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5rem;
-}
+
+
+
+

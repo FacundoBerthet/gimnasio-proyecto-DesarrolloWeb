@@ -1,30 +1,29 @@
-footer{
+@import '../var/variables.scss';
+
+footer {
     grid-area: footer;
     background-color: orange;
     display: flex;
     justify-content: space-between;
-    padding: 1rem
+    padding: 1rem;
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        
+        li {
+            list-style-type: none;
+            
+            a {
+                color: $colorFooter;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    a {
+        font: $fuenteFooter;
+        color: $colorFooter;
+        text-decoration: none;
+    }
 }
-
-footer ul{
-    display: flex;
-    flex-direction: column;
-}
-
-footer ul li{
-    list-style-type: none;
-}
-
-footer ul li a{
-    color: #fd3a33; 
-    text-decoration: none;
-}
-
-footer a{
-    color: #fd3a33; 
-    font-size: 1.5rem; 
-    font-weight: 900; 
-    text-decoration: none;
-    font-family: "finish";
-}
-
