@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/*ARCHIVOS SCSS*/
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 html {
   font-size: 62.5%;
@@ -93,47 +93,6 @@ footer a {
   font-family: "finish";
 }
 
-.iconoWpp {
-  height: 3rem;
-  width: 3rem;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-}
-
-main {
-  grid-area: main;
-  background-color: antiquewhite;
-}
-
-/*grid*/
-#grilla {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "header header" "main main" "footer footer";
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 14px;
-}
-
-/* FUENTES */
-@font-face {
-  font-family: "bebas";
-  src: url("../medios/BebasNeue-Regular.ttf");
-}
-@font-face {
-  font-family: "finish";
-  src: url("../medios/fFinish.ttf");
-}
-#nombre:hover, #edad:hover, #email:hover {
-  background-color: gray;
-}
-
-/*Titulos y subtitulos*/
 h1 {
   background-color: lightgray;
   margin: 1rem 1rem 2rem 1rem;
@@ -155,11 +114,54 @@ h2 {
   padding: 5rem;
 }
 
-/*CARDS BOOTSTRAP*/
+.iconoWpp {
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.carta {
+  background-color: lightslategray;
+  margin: 1rem;
+  border-radius: 14px;
+  padding: 1rem;
+  width: 50%;
+}
+
+/*CARTA VIDEO INDEX*/
+.cartaVideo {
+  background-color: lightslategray;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem 3rem 1rem;
+  border-radius: 14px;
+}
+.cartaVideo .texto_carta_video {
+  font-family: "oswald";
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+.cartaVideo ul li p {
+  font-family: "oswald";
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+/*CARTAS PLANES*/
 .card {
   border-radius: 14px;
-  padding: 0rem; /* Quita el padding */
-  margin: 0.5rem; /* Agrega un pequeño margen */
+  padding: 0rem;
+  margin: 0.5rem;
 }
 
 .bronce {
@@ -178,53 +180,32 @@ h2 {
   background-color: aquamarine;
 }
 
-/* contenedores*/
-.contenedor {
-  grid-area: main;
-  display: flex;
+.texto_carta ul li {
+  list-style-type: none;
 }
 
-.carta {
-  background-color: lightslategray;
-  margin: 1rem;
-  border-radius: 14px;
-  padding: 1rem;
-  width: 50%;
-}
-
-p {
+.texto_carta {
   font-family: "oswald";
   font-size: 2rem;
   text-align: center;
   margin: 0.5rem;
 }
 
-.texto_carta ul li {
-  list-style-type: none;
+.texto_carta_video ul li p {
+  font-family: "oswald";
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem;
 }
 
+.contenedor {
+  grid-area: main;
+  display: flex;
+}
+
+/*CONTENEDOR VIDEO INDEX*/
 .contenedorVideo {
   grid-area: main;
-}
-
-.cartaVideo {
-  background-color: lightslategray;
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 1rem 3rem 1rem;
-  border-radius: 14px;
-}
-
-#video {
-  width: 100%;
-  border-radius: 14px;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-.mapa iframe {
-  width: 100%;
-  height: 100;
-  border-radius: 14px;
 }
 
 #formulario {
@@ -233,6 +214,22 @@ p {
 
 #formulario {
   font-family: "oswald";
+}
+
+#nombre:hover, #edad:hover, #email:hover {
+  background-color: gray;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100;
+  border-radius: 14px;
+}
+
+#video {
+  width: 100%;
+  border-radius: 14px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 @media (max-width: 480px) {
@@ -283,6 +280,15 @@ p {
     display: flex;
     flex-direction: column;
   }
+}
+/* FUENTES */
+@font-face {
+  font-family: "bebas";
+  src: url("../medios/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "finish";
+  src: url("../medios/fFinish.ttf");
 }
 
 /*# sourceMappingURL=style.css.map */
