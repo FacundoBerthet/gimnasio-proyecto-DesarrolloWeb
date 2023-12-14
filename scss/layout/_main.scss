@@ -1,0 +1,15 @@
+main{
+    grid-area: main;
+    background-color: antiquewhite;
+}
+
+/*grid*/
+#grilla{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
+}

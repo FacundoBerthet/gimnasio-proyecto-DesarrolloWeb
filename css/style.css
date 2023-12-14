@@ -1,324 +1,287 @@
-/* FUENTES */
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
-
-@font-face {
-    font-family: "bebas";
-    src: url("../medios/BebasNeue-Regular.ttf");
+html {
+  font-size: 62.5%;
 }
 
-@font-face {
-    font-family: "finish";
-    src: url("../medios/fFinish.ttf");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ESTILOS GENERALES */
-html{
-    font-size: 62.5%;
-}
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.menu {
+  width: 100%;
+  background-color: orange;
 }
 
-a:active{
-    background-color: #fd3a33;
+.listanav {
+  flex-grow: 0;
 }
 
-#nombre:hover,#edad:hover,#email:hover{
-    background-color: gray;
+.navbar-brand:hover {
+  background-color: inherit;
+}
+
+header {
+  grid-area: header;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  border-bottom: 0.2rem solid yellow;
+  z-index: 1000;
+}
+
+header nav ul {
+  display: flex;
+  margin-right: 1rem;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #fd3a33;
+  text-decoration: none;
+  font-family: "finish";
+  background-color: yellow;
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  border: solid red 1px;
+  border-radius: 12px;
+}
+
+header nav ul li a:hover {
+  background-color: white;
+}
+
+header a img {
+  width: 5.5rem;
+  margin: 1rem 0rem 1rem 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+footer ul li a {
+  color: #fd3a33;
+  text-decoration: none;
+}
+
+footer a {
+  color: #fd3a33;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "finish";
+}
+
+.iconoWpp {
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+  header nav ul a {
+    margin: 0.2rem;
+    margin-left: 0.6rem;
+  }
+  header a img {
+    margin-top: 0.5rem;
+  }
+  h1 {
+    font-size: 3.7rem;
+    padding: 1rem;
+  }
+  h2 {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  .carta {
+    width: 93.8%;
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+  #video {
+    width: 100%;
+    height: 30rem;
+  }
+  .cartaVideo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  #video {
+    width: 100%;
+    height: 30rem;
+  }
+  .cartaVideo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+main {
+  grid-area: main;
+  background-color: antiquewhite;
 }
 
 /*grid*/
-#grilla{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer";
-}
-
-/*header*/
-.menu{
-    width: 100%;
-    background-color: orange;
-}
-
-.listanav{
-    flex-grow: 0;
-}
-
-.navbar-brand:hover{
-    background-color: inherit;
-}
-
-
-header{
-    grid-area: header;
-    background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0px;
-    border-bottom: 0.2rem solid yellow
-    ;
-    z-index: 1000
-}
-
-header nav ul{
-    display: flex;
-    margin-right: 1rem;
-}
-
-header nav ul li{
-    list-style-type: none;
-}
-
-header nav ul li a{
-    color: #fd3a33; 
-    text-decoration: none;
-    font-family: "finish";
-    background-color: yellow;
-    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
-    border: solid red 1px;
-    border-radius: 12px;
-}
-
-header nav ul li a:hover{
-    background-color: white;
-}
-
-header a img{
-    width: 5.5rem;
-    margin: 1rem 0rem 1rem 1rem;
-}
-
-/*Titulos y subtitulos*/
-h1{
-    background-color: lightgray;
-    margin: 1rem 1rem 2rem 1rem;
-    grid-area: main;
-    text-align: center; 
-    font-size: 6rem; 
-    font-weight: 900;
-    font-family: "bebas";
-    padding: 4rem 7rem 4rem 7rem;
-}
-
-h2{
-    grid-area: main;
-    text-align: center; 
-    font-size: 3rem; 
-    font-weight: 600;
-    font-family: "oswald";
-    margin-bottom: 2rem;
-    padding: 5rem;
-}
-
-
-
-
-
-/*main*/
-main{
-    grid-area: main;
-    background-color: antiquewhite;
-}
-
-
-/*CARDS BOOTSTRAP*/
-.card{
-    border-radius: 14px;
-    padding: 0rem; /* Quita el padding */
-    margin: 0.5rem; /* Agrega un pequeño margen */
-}
-
-.bronce{
-    background-color: burlywood ;
-}
-
-.plata{
-    background-color: lightgray;
-}
-
-.oro{
-    background-color: gold;
-}
-
-.diamante{
-    background-color: aquamarine;
-}
-
-/* contenedores*/
-.contenedor{
-    grid-area: main;
-    display: flex;
-}
-
-
-.carta{
-    background-color: lightslategray;
-    margin: 1rem;
-    border-radius: 14px;
-    padding: 1rem;
-    width: 50%;
-}
-
-p{
-    font-family: "oswald";
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5rem;
-}
-
-.texto_carta ul li{
-    list-style-type: none;
-}
-
-
-.contenedorVideo{
-    grid-area: main;
-}
-
-.cartaVideo{
-    background-color: lightslategray;
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 1rem 3rem 1rem;
-    border-radius: 14px;
-}
-
-#video{
-    width: 100%;
-    border-radius: 14px;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-.mapa iframe{
-    width: 100%;
-    height: 100;    
-    border-radius: 14px;
-}
-
-#formulario{
-    font-size: 1.3rem;
-}
-
-
-/*footer*/
-footer{
-    grid-area: footer;
-    background-color: orange;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem
-}
-
-footer ul{
-    display: flex;
-    flex-direction: column;
-}
-
-footer ul li{
-    list-style-type: none;
-}
-
-footer ul li a{
-    color: #fd3a33; 
-    text-decoration: none;
-}
-
-footer a{
-    color: #fd3a33; 
-    font-size: 1.5rem; 
-    font-weight: 900; 
-    text-decoration: none;
-    font-family: "finish";
+#grilla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "main main" "footer footer";
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 14px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
 }
 
-
-
-
-/* Icono wpp */
-.iconoWpp{
-    height: 3rem;
-    width: 3rem;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
+/* FUENTES */
+@font-face {
+  font-family: "bebas";
+  src: url("../medios/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "finish";
+  src: url("../medios/fFinish.ttf");
+}
+#nombre:hover, #edad:hover, #email:hover {
+  background-color: gray;
 }
 
-/*Formulario*/
-#formulario{
-    font-family: "oswald";
-}       
-
-/*Responsive*/
-@media (max-width: 480px){
-    header{
-        flex-direction: column;
-        padding: 0rem 0rem 2rem 0rem;
-    }
-    header nav ul a{
-        margin: 0.2rem;
-        margin-left: 0.6rem;
-    }
-    header a img{
-        margin-top: 0.5rem;
-    }
-
-    h1{
-        font-size: 3.7rem;
-        padding: 1rem;
-    }
-
-    h2{
-        font-size: 2rem;
-        padding: 0.5rem;
-    }
-
-    p{
-        font-size: 1.4rem;
-    }
-
-    .carta{
-        width: 93.8%;
-    }
-
-    .contenedor{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #video{
-        width: 100%;
-        height: 30rem;
-    }
-    
-    .cartaVideo{
-        display: flex;
-        flex-direction: column;
-    }
+/*Titulos y subtitulos*/
+h1 {
+  background-color: lightgray;
+  margin: 1rem 1rem 2rem 1rem;
+  grid-area: main;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "bebas";
+  padding: 4rem 7rem 4rem 7rem;
 }
 
-@media (max-width:768px) {
-    #video{
-        width: 100%;
-        height: 30rem;
-    }
-    
-    .cartaVideo{
-        display: flex;
-        flex-direction: column;
-    }
-    
+h2 {
+  grid-area: main;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "oswald";
+  margin-bottom: 2rem;
+  padding: 5rem;
 }
+
+/*CARDS BOOTSTRAP*/
+.card {
+  border-radius: 14px;
+  padding: 0rem; /* Quita el padding */
+  margin: 0.5rem; /* Agrega un pequeño margen */
+}
+
+.bronce {
+  background-color: burlywood;
+}
+
+.plata {
+  background-color: lightgray;
+}
+
+.oro {
+  background-color: gold;
+}
+
+.diamante {
+  background-color: aquamarine;
+}
+
+/* contenedores*/
+.contenedor {
+  grid-area: main;
+  display: flex;
+}
+
+.carta {
+  background-color: lightslategray;
+  margin: 1rem;
+  border-radius: 14px;
+  padding: 1rem;
+  width: 50%;
+}
+
+p {
+  font-family: "oswald";
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.texto_carta ul li {
+  list-style-type: none;
+}
+
+.contenedorVideo {
+  grid-area: main;
+}
+
+.cartaVideo {
+  background-color: lightslategray;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem 3rem 1rem;
+  border-radius: 14px;
+}
+
+#video {
+  width: 100%;
+  border-radius: 14px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100;
+  border-radius: 14px;
+}
+
+#formulario {
+  font-size: 1.3rem;
+}
+
+#formulario {
+  font-family: "oswald";
+}
+
+/*# sourceMappingURL=style.css.map */
