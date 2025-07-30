@@ -2,13 +2,13 @@
 
 ![SeniorFit Logo](./medios/favicon.png)
 
-## 👋 ¡Hola! Soy Facundo Berthet
+## 👋 ¡Hola! 
 
 Este es mi proyecto **SeniorFit**, una plataforma web dedicada al bienestar y fitness para adultos mayores. 
 
 ## 🎯 ¿De qué se trata el proyecto?
 
-SeniorFit es más que un simple sitio web de gimnasio. Es una plataforma pensada específicamente para adultos mayores que buscan:
+SeniorFit es es una plataforma pensada específicamente para adultos mayores que buscan:
 
 - **Mantenerse activos** con rutinas adaptadas a sus necesidades
 - **Formar parte de una comunidad** que entiende sus objetivos de bienestar
